@@ -32,12 +32,6 @@ function initCatalogue() {
   const techCheckboxes = document.querySelectorAll('input[name="tech"]');
   const resetButton = document.getElementById("reset-filters");
 
-  const availabilityLabel = {
-    "en-stock": "En Stock",
-    "sur-commande": "Sur Commande",
-    rupture: "Rupture de Stock",
-  };
-
   function buildCategoryFilters() {
     categoryFilters.innerHTML = allCategories
       .map(
@@ -59,51 +53,6 @@ function initCatalogue() {
   function categoryLabel(categoryId) {
     const cat = allCategories.find((c) => c.id === categoryId);
     return cat ? cat.label : categoryId;
-  }
-
-  function productCardHTML(product) {
-    const imageBlock = product.imageUrl
-      ? `<div class="w-full h-full bg-cover bg-center" style="background-image:url('${product.imageUrl}')"></div>`
-      : `<div class="media-placeholder w-full h-full"><i class="ph ph-image"></i><span>Photo à ajouter</span></div>`;
-
-    return `
-      <div class="product-card flex flex-col bg-surface-container rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group">
-        <div class="relative w-full h-56 bg-surface-container-high overflow-hidden">
-          ${imageBlock}
-          <div class="absolute top-3 left-3 flex gap-2">
-            <span class="bg-surface/90 backdrop-blur-md text-secondary text-[11px] font-label px-3 py-1 rounded-full uppercase tracking-wider">
-              ${availabilityLabel[product.availability] || ""}
-            </span>
-            <span class="bg-secondary text-on-secondary text-[11px] font-label px-3 py-1 rounded-full uppercase">${product.techLabel}</span>
-          </div>
-          <div class="absolute bottom-3 right-3 bg-surface-container-highest/90 backdrop-blur-md px-2.5 py-1 rounded-lg text-xs font-label text-on-surface">
-            Réf: ${product.reference}
-          </div>
-        </div>
-        <div class="flex flex-col flex-1 p-6 justify-between gap-6">
-          <div class="flex flex-col gap-2">
-            <span class="text-xs font-label text-primary uppercase">${categoryLabel(product.categoryId)}</span>
-            <h3 class="font-headline font-semibold text-on-surface group-hover:text-secondary transition-colors">${product.name}</h3>
-            <p class="text-sm text-on-surface-variant line-clamp-2">${product.description || ""}</p>
-          </div>
-          <div class="flex flex-col gap-4">
-            <div class="flex items-baseline justify-between">
-              <span class="text-sm text-on-surface-variant">Prix unitaire</span>
-              <span class="font-headline font-bold text-secondary">${formatPrice(product.price)}</span>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface text-xs font-label py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition-colors"
-                onclick="addToCart('${product.name.replace(/'/g, "\\'")}', ${product.price})">
-                <i class="ph ph-shopping-cart"></i> Acheter
-              </button>
-              <button class="bg-secondary hover:bg-[#164d9e] text-on-secondary text-xs font-label py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition-colors"
-                onclick="requestQuote('${product.name.replace(/'/g, "\\'")}')">
-                <i class="ph ph-wrench"></i> Devis + Installation
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>`;
   }
 
   function getFilters() {
@@ -147,7 +96,7 @@ function initCatalogue() {
       grid.classList.remove("hidden");
       emptyState.classList.add("hidden");
       emptyState.classList.remove("flex");
-      grid.innerHTML = filtered.map(productCardHTML).join("");
+      grid.innerHTML = filtered.map((p) => productCardHTML(p, categoryLabel(p.categoryId))).join("");
     }
   }
 
@@ -169,20 +118,4 @@ function initCatalogue() {
   });
 
   renderProducts();
-}
-
-function addToCart(productName, price) {
-  showNotification(
-    "Panier mis à jour",
-    `${productName} (${price.toLocaleString("fr-FR")} DZD) ajouté avec succès.`,
-    "check-circle"
-  );
-}
-
-function requestQuote(productName) {
-  showNotification(
-    "Demande de devis",
-    `Préparation du dossier d'installation pour : ${productName}`,
-    "wrench"
-  );
 }

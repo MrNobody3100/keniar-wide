@@ -6,17 +6,18 @@
     </a>
 
     <nav class="hidden md:flex items-center gap-8">
-      <a data-path="accueil" href="index.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Accueil</a>
-      <a data-path="catalogue-produits" href="catalogue-produits.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Catalogue Produits</a>
-      <a data-path="devis-sur-mesure" href="devis-sur-mesure.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Devis sur Mesure</a>
-      <a data-path="realisations" href="realisations.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Réalisations</a>
-      <a data-path="contact" href="contact.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      <a data-path="accueil" href="index.html" class="nav-link text-sm text-on-surface-variant hover:text-on-surface transition-colors">Accueil</a>
+      <a data-path="catalogue-produits" href="catalogue-produits.html" class="nav-link text-sm text-on-surface-variant hover:text-on-surface transition-colors">Catalogue Produits</a>
+      <a data-path="devis-sur-mesure" href="devis-sur-mesure.html" class="nav-link text-sm text-on-surface-variant hover:text-on-surface transition-colors">Devis sur Mesure</a>
+      <a data-path="realisations" href="realisations.html" class="nav-link text-sm text-on-surface-variant hover:text-on-surface transition-colors">Réalisations</a>
+      <a data-path="contact" href="contact.html" class="nav-link text-sm text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
     </nav>
 
     <div class="flex items-center gap-3 sm:gap-5">
-      <a href="catalogue-produits.html#panier" class="relative hidden sm:inline-flex text-on-surface-variant hover:text-on-surface transition-colors">
+      <button type="button" data-cart-toggle class="relative hidden sm:inline-flex text-on-surface-variant hover:text-on-surface transition-colors">
         <i class="ph ph-shopping-cart text-2xl"></i>
-      </a>
+        <span data-cart-count class="hidden absolute -top-1.5 -right-2 bg-secondary text-on-secondary text-[10px] font-label min-w-[18px] h-[18px] px-1 rounded-full flex items-center justify-center">0</span>
+      </button>
       <a href="devis-sur-mesure.html" class="bg-secondary text-on-secondary px-4 py-2.5 rounded-xl text-xs font-label uppercase tracking-wide hover:bg-[#164d9e] transition-all">
         Demander un Devis
       </a>

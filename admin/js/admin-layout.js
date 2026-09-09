@@ -20,12 +20,12 @@ async function checkAdminSession() {
     const res = await fetch("/api/session", { credentials: "include" });
     const data = await res.json();
     if (!data.authenticated) {
-      window.location.href = "login.html";
+      window.location.href = "/admin/login.html";
       return false;
     }
     return true;
   } catch (err) {
-    window.location.href = "login.html";
+    window.location.href = "/admin/login.html";
     return false;
   }
 }
@@ -75,7 +75,7 @@ function wireLogout() {
     try {
       await fetch("/api/logout", { method: "POST", credentials: "include" });
     } finally {
-      window.location.href = "login.html";
+      window.location.href = "/admin/login.html";
     }
   });
 }

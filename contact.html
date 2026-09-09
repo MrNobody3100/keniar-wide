@@ -95,17 +95,18 @@
     </a>
 
     <nav class="hidden md:flex items-center gap-8">
-      <a data-path="accueil" href="index.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Accueil</a>
-      <a data-path="catalogue-produits" href="catalogue-produits.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Catalogue Produits</a>
-      <a data-path="devis-sur-mesure" href="devis-sur-mesure.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Devis sur Mesure</a>
-      <a data-path="realisations" href="realisations.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Réalisations</a>
-      <a data-path="contact" href="contact.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+      <a data-path="accueil" href="index.html" class="nav-link text-sm text-on-surface-variant hover:text-on-surface transition-colors">Accueil</a>
+      <a data-path="catalogue-produits" href="catalogue-produits.html" class="nav-link text-sm text-on-surface-variant hover:text-on-surface transition-colors">Catalogue Produits</a>
+      <a data-path="devis-sur-mesure" href="devis-sur-mesure.html" class="nav-link text-sm text-on-surface-variant hover:text-on-surface transition-colors">Devis sur Mesure</a>
+      <a data-path="realisations" href="realisations.html" class="nav-link text-sm text-on-surface-variant hover:text-on-surface transition-colors">Réalisations</a>
+      <a data-path="contact" href="contact.html" class="nav-link text-sm text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
     </nav>
 
     <div class="flex items-center gap-3 sm:gap-5">
-      <a href="catalogue-produits.html#panier" class="relative hidden sm:inline-flex text-on-surface-variant hover:text-on-surface transition-colors">
+      <button type="button" data-cart-toggle class="relative hidden sm:inline-flex text-on-surface-variant hover:text-on-surface transition-colors">
         <i class="ph ph-shopping-cart text-2xl"></i>
-      </a>
+        <span data-cart-count class="hidden absolute -top-1.5 -right-2 bg-secondary text-on-secondary text-[10px] font-label min-w-[18px] h-[18px] px-1 rounded-full flex items-center justify-center">0</span>
+      </button>
       <a href="devis-sur-mesure.html" class="bg-secondary text-on-secondary px-4 py-2.5 rounded-xl text-xs font-label uppercase tracking-wide hover:bg-[#164d9e] transition-all">
         Demander un Devis
       </a>
@@ -141,7 +142,9 @@
           </div>
           <div>
             <span class="text-xs font-label text-on-surface-variant uppercase block">Téléphone</span>
-            <span class="font-headline font-semibold text-on-surface">+213 (0) 00 00 00 00</span>
+            <span class="font-headline font-semibold text-on-surface block">+213 771 36 59 35</span>
+            <span class="font-headline font-semibold text-on-surface block">+213 557 48 42 92</span>
+            <span class="font-headline font-semibold text-on-surface block">+213 0654412980</span>
           </div>
         </div>
         <div class="flex items-center gap-4">
@@ -150,7 +153,7 @@
           </div>
           <div>
             <span class="text-xs font-label text-on-surface-variant uppercase block">Email</span>
-            <span class="font-headline font-semibold text-on-surface">contact@keniarwide.dz</span>
+            <span class="font-headline font-semibold text-on-surface">wskeniar@gmail.com</span>
           </div>
         </div>
         <div class="flex items-center gap-4">
@@ -159,8 +162,16 @@
           </div>
           <div>
             <span class="text-xs font-label text-on-surface-variant uppercase block">Adresse</span>
-            <span class="font-headline font-semibold text-on-surface">Algérie</span>
+            <span class="font-headline font-semibold text-on-surface">Rue Latrache Mohamed, Oran</span>
           </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://www.facebook.com/NRSSSNR/" target="_blank" rel="noopener" class="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors">
+            <i class="ph ph-facebook-logo text-xl"></i>
+          </a>
+          <a href="https://www.instagram.com/eurlkeniarwide/" target="_blank" rel="noopener" class="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors">
+            <i class="ph ph-instagram-logo text-xl"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -195,11 +206,23 @@
       <p class="text-sm text-on-surface-variant">
         Solutions expertes en sécurité électronique et infrastructures courants faibles pour environnements professionnels haute vigilance.
       </p>
+      <div class="flex items-center gap-3 mt-1">
+        <a href="https://www.facebook.com/NRSSSNR/" target="_blank" rel="noopener" aria-label="Facebook"
+          class="w-9 h-9 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors">
+          <i class="ph ph-facebook-logo"></i>
+        </a>
+        <a href="https://www.instagram.com/eurlkeniarwide/" target="_blank" rel="noopener" aria-label="Instagram"
+          class="w-9 h-9 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors">
+          <i class="ph ph-instagram-logo"></i>
+        </a>
+      </div>
     </div>
-    <div class="flex flex-col gap-2">
-      <span class="font-label text-xs text-primary uppercase tracking-wide">Assistance</span>
-      <span class="font-headline text-lg text-secondary">+213 (0) 00 00 00 00</span>
-      <p class="text-sm text-on-surface-variant">Assistance technique et supervision, du lundi au samedi.</p>
+    <div class="flex flex-col gap-1.5">
+      <span class="font-label text-xs text-primary uppercase tracking-wide">Contact</span>
+      <a href="tel:+213771365935" class="font-headline text-base text-secondary hover:underline">+213 771 36 59 35</a>
+      <a href="tel:+213557484292" class="font-headline text-base text-secondary hover:underline">+213 557 48 42 92</a>
+      <a href="mailto:wskeniar@gmail.com" class="text-sm text-on-surface-variant hover:text-on-surface">wskeniar@gmail.com</a>
+      <p class="text-sm text-on-surface-variant mt-1">Rue Latrache Mohamed, Oran</p>
     </div>
     <div class="flex flex-col gap-2">
       <span class="font-label text-xs text-primary uppercase tracking-wide">Liens rapides</span>
@@ -230,6 +253,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/supabase-client.js"></script>
     <script src="js/store.js"></script>
+    <script src="js/cart.js"></script>
     <script src="js/contact.js"></script>
 </body>
 </html>

@@ -46,6 +46,11 @@
   --color-on-background: #1c1b1b;
   --color-surface-variant: #e5e2e1;
 
+  /* Brand accent — sampled from the Keniar Wide logo's hexagon border */
+  --color-brand-orange: #f9a026;
+  --color-brand-orange-dark: #d9860f;
+  --color-brand-orange-container: #fff2df;
+
   /* Typography */
   --font-headline: "Plus Jakarta Sans", sans-serif;
   --font-body: "Inter", sans-serif;

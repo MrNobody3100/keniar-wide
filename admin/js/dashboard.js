@@ -71,7 +71,7 @@ function renderRecentDevis(devis) {
   list.innerHTML = items
     .map(
       (d) => `
-    <a href="devis.html" class="flex items-center justify-between gap-4 px-6 py-4 hover:bg-surface-container-high transition-colors">
+    <a href="/admin/devis.html" class="flex items-center justify-between gap-4 px-6 py-4 hover:bg-surface-container-high transition-colors">
       <div class="flex items-center gap-4 min-w-0">
         <div class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
           <i class="ph ph-user text-lg"></i>
@@ -105,7 +105,7 @@ function renderLowStock(products) {
   list.innerHTML = items
     .map(
       (p) => `
-    <a href="produits.html" class="flex items-center justify-between gap-4 px-6 py-4 hover:bg-surface-container-high transition-colors">
+    <a href="/admin/produits.html" class="flex items-center justify-between gap-4 px-6 py-4 hover:bg-surface-container-high transition-colors">
       <div class="flex flex-col min-w-0">
         <span class="font-headline font-semibold text-on-surface text-sm truncate">${p.name}</span>
         <span class="text-xs text-on-surface-variant truncate">Réf: ${p.reference}</span>

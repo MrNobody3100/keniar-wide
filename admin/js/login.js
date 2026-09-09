@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const res = await fetch("/api/session", { credentials: "include" });
     const data = await res.json();
     if (data.authenticated) {
-      window.location.href = "index.html";
+      window.location.href = "/admin/index.html";
       return;
     }
   } catch {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const data = await res.json();
 
       if (data.ok) {
-        window.location.href = "index.html";
+        window.location.href = "/admin/index.html";
       } else {
         errorText.textContent = data.error || "Identifiant ou mot de passe incorrect.";
         errorMsg.classList.remove("hidden");

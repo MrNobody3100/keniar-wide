@@ -81,8 +81,8 @@
 </script>
 
 <!-- Site styles (tokens + custom rules layered on top of Tailwind) -->
-<link rel="stylesheet" href="../css/main.css" />
-<link rel="stylesheet" href="../css/admin.css" />
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="stylesheet" href="/css/admin.css" />
 
     <title>Produits & Stock | Admin Keniar Wide</title>
     <meta name="robots" content="noindex, nofollow" />
@@ -93,7 +93,7 @@
   <!-- Sidebar -->
   <aside id="admin-sidebar" class="hidden lg:flex w-72 shrink-0 flex-col bg-surface-container-lowest border-r border-outline-variant/30 min-h-screen sticky top-0">
     <div class="h-20 flex items-center gap-3 px-6 border-b border-outline-variant/20">
-      <img src="../assets/images/logo/keniar-logo.png" alt="EURL Keniar Wide" class="h-9 w-9 object-contain rounded-lg" />
+      <img src="/assets/images/logo/keniar-logo.png" alt="EURL Keniar Wide" class="h-9 w-9 object-contain rounded-lg" />
       <div class="flex flex-col leading-tight">
         <span class="font-headline font-semibold text-on-surface text-sm">Keniar Wide</span>
         <span class="text-xs text-on-surface-variant">Espace Admin</span>
@@ -101,37 +101,37 @@
     </div>
 
     <nav class="flex-1 flex flex-col gap-1 px-4 py-6">
-      <a data-admin-path="dashboard" href="index.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
+      <a data-admin-path="dashboard" href="/admin/index.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
         <i class="ph ph-squares-four text-xl"></i>
         <span class="text-sm font-medium">Tableau de bord</span>
       </a>
-      <a data-admin-path="devis" href="devis.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
+      <a data-admin-path="devis" href="/admin/devis.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
         <i class="ph ph-file-text text-xl"></i>
         <span class="text-sm font-medium flex-1">Demandes de devis</span>
         <span id="sidebar-devis-count" class="hidden text-xs font-label bg-secondary text-on-secondary rounded-full min-w-[20px] h-5 px-1.5 flex items-center justify-center"></span>
       </a>
-      <a data-admin-path="messages" href="messages.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
+      <a data-admin-path="messages" href="/admin/messages.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
         <i class="ph ph-chat-circle-text text-xl"></i>
         <span class="text-sm font-medium flex-1">Messages de contact</span>
         <span id="sidebar-messages-count" class="hidden text-xs font-label bg-secondary text-on-secondary rounded-full min-w-[20px] h-5 px-1.5 flex items-center justify-center"></span>
       </a>
 
       <span class="text-xs font-label text-on-surface-variant uppercase px-4 pt-6 pb-2">Catalogue</span>
-      <a data-admin-path="produits" href="produits.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
+      <a data-admin-path="produits" href="/admin/produits.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
         <i class="ph ph-package text-xl"></i>
         <span class="text-sm font-medium">Produits &amp; Stock</span>
       </a>
-      <a data-admin-path="categories" href="categories.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
+      <a data-admin-path="categories" href="/admin/categories.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
         <i class="ph ph-squares-four text-xl"></i>
         <span class="text-sm font-medium">Catégories</span>
       </a>
-      <a data-admin-path="realisations" href="realisations.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
+      <a data-admin-path="realisations" href="/admin/realisations.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
         <i class="ph ph-buildings text-xl"></i>
         <span class="text-sm font-medium">Réalisations</span>
       </a>
 
       <span class="text-xs font-label text-on-surface-variant uppercase px-4 pt-6 pb-2">Site</span>
-      <a href="../index.html" target="_blank" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
+      <a href="/index.html" target="_blank" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high transition-colors">
         <i class="ph ph-arrow-square-out text-xl"></i>
         <span class="text-sm font-medium">Voir le site public</span>
       </a>
@@ -151,28 +151,28 @@
     <aside class="relative w-72 h-full bg-surface-container-lowest flex flex-col">
       <div class="h-20 flex items-center justify-between gap-3 px-6 border-b border-outline-variant/20">
         <div class="flex items-center gap-3">
-          <img src="../assets/images/logo/keniar-logo.png" alt="EURL Keniar Wide" class="h-9 w-9 object-contain rounded-lg" />
+          <img src="/assets/images/logo/keniar-logo.png" alt="EURL Keniar Wide" class="h-9 w-9 object-contain rounded-lg" />
           <span class="font-headline font-semibold text-on-surface text-sm">Espace Admin</span>
         </div>
         <button id="admin-mobile-close" class="text-on-surface-variant p-1"><i class="ph ph-x text-xl"></i></button>
       </div>
       <nav class="flex-1 flex flex-col gap-1 px-4 py-6">
-        <a data-admin-path="dashboard" href="index.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high">
+        <a data-admin-path="dashboard" href="/admin/index.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high">
           <i class="ph ph-squares-four text-xl"></i><span class="text-sm font-medium">Tableau de bord</span>
         </a>
-        <a data-admin-path="devis" href="devis.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high">
+        <a data-admin-path="devis" href="/admin/devis.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high">
           <i class="ph ph-file-text text-xl"></i><span class="text-sm font-medium">Demandes de devis</span>
         </a>
-        <a data-admin-path="messages" href="messages.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high">
+        <a data-admin-path="messages" href="/admin/messages.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high">
           <i class="ph ph-chat-circle-text text-xl"></i><span class="text-sm font-medium">Messages de contact</span>
         </a>
-        <a data-admin-path="produits" href="produits.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high">
+        <a data-admin-path="produits" href="/admin/produits.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high">
           <i class="ph ph-package text-xl"></i><span class="text-sm font-medium">Produits &amp; Stock</span>
         </a>
-        <a data-admin-path="categories" href="categories.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high">
+        <a data-admin-path="categories" href="/admin/categories.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high">
           <i class="ph ph-squares-four text-xl"></i><span class="text-sm font-medium">Catégories</span>
         </a>
-        <a data-admin-path="realisations" href="realisations.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high">
+        <a data-admin-path="realisations" href="/admin/realisations.html" class="admin-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high">
           <i class="ph ph-buildings text-xl"></i><span class="text-sm font-medium">Réalisations</span>
         </a>
       </nav>
@@ -375,11 +375,11 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="../js/supabase-client.js"></script>
-<script src="../js/store.js"></script>
-<script src="js/admin-layout.js"></script>
+<script src="/js/supabase-client.js"></script>
+<script src="/js/store.js"></script>
+<script src="/admin/js/admin-layout.js"></script>
 
-    <script src="js/produits.js"></script>
+    <script src="/admin/js/produits.js"></script>
     <script>document.getElementById('admin-page-title').textContent = 'Produits & Stock';</script>
 </body>
 </html>
