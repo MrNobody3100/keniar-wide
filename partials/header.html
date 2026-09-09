@@ -1,0 +1,37 @@
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/images/logo/keniar-logo.png" alt="EURL Keniar Wide" class="h-10 w-10 object-contain rounded-lg" />
+      <span class="font-headline font-semibold text-on-surface tracking-wide uppercase text-sm sm:text-base">EURL Keniar Wide</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      <a data-path="accueil" href="index.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Accueil</a>
+      <a data-path="catalogue-produits" href="catalogue-produits.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Catalogue Produits</a>
+      <a data-path="devis-sur-mesure" href="devis-sur-mesure.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Devis sur Mesure</a>
+      <a data-path="realisations" href="realisations.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Réalisations</a>
+      <a data-path="contact" href="contact.html" class="text-sm text-on-surface-variant hover:text-on-surface transition-colors">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3 sm:gap-5">
+      <a href="catalogue-produits.html#panier" class="relative hidden sm:inline-flex text-on-surface-variant hover:text-on-surface transition-colors">
+        <i class="ph ph-shopping-cart text-2xl"></i>
+      </a>
+      <a href="devis-sur-mesure.html" class="bg-secondary text-on-secondary px-4 py-2.5 rounded-xl text-xs font-label uppercase tracking-wide hover:bg-[#164d9e] transition-all">
+        Demander un Devis
+      </a>
+      <button id="mobile-nav-toggle" aria-expanded="false" class="md:hidden text-on-surface p-2 -mr-2">
+        <i class="ph ph-list text-2xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <div id="mobile-nav-panel" class="hidden md:hidden flex-col gap-1 bg-surface border-t border-outline-variant/30 px-6 py-4">
+    <a data-path="accueil" href="index.html" class="py-2.5 text-on-surface-variant hover:text-on-surface">Accueil</a>
+    <a data-path="catalogue-produits" href="catalogue-produits.html" class="py-2.5 text-on-surface-variant hover:text-on-surface">Catalogue Produits</a>
+    <a data-path="devis-sur-mesure" href="devis-sur-mesure.html" class="py-2.5 text-on-surface-variant hover:text-on-surface">Devis sur Mesure</a>
+    <a data-path="realisations" href="realisations.html" class="py-2.5 text-on-surface-variant hover:text-on-surface">Réalisations</a>
+    <a data-path="contact" href="contact.html" class="py-2.5 text-on-surface-variant hover:text-on-surface">Contact</a>
+  </div>
+</header>

@@ -1,0 +1,82 @@
+<div class="flex flex-col gap-8">
+
+  <!-- Stat cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+    <div class="bg-surface-container-lowest rounded-2xl p-6 flex flex-col gap-3 border border-outline-variant/10">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-label text-on-surface-variant uppercase">Demandes de devis</span>
+        <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+          <i class="ph ph-file-text text-xl"></i>
+        </div>
+      </div>
+      <span id="stat-devis-total" class="font-headline font-bold text-on-surface text-3xl">0</span>
+      <span id="stat-devis-new" class="text-sm text-secondary">0 nouvelles</span>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-2xl p-6 flex flex-col gap-3 border border-outline-variant/10">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-label text-on-surface-variant uppercase">Produits au catalogue</span>
+        <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+          <i class="ph ph-package text-xl"></i>
+        </div>
+      </div>
+      <span id="stat-products-total" class="font-headline font-bold text-on-surface text-3xl">0</span>
+      <span id="stat-products-low" class="text-sm text-tertiary">0 en stock faible</span>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-2xl p-6 flex flex-col gap-3 border border-outline-variant/10">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-label text-on-surface-variant uppercase">Messages de contact</span>
+        <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+          <i class="ph ph-chat-circle-text text-xl"></i>
+        </div>
+      </div>
+      <span id="stat-messages-total" class="font-headline font-bold text-on-surface text-3xl">0</span>
+      <span id="stat-messages-unread" class="text-sm text-secondary">0 non lus</span>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-2xl p-6 flex flex-col gap-3 border border-outline-variant/10">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-label text-on-surface-variant uppercase">Réalisations publiées</span>
+        <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+          <i class="ph ph-buildings text-xl"></i>
+        </div>
+      </div>
+      <span id="stat-realisations-total" class="font-headline font-bold text-on-surface text-3xl">0</span>
+      <span class="text-sm text-on-surface-variant">projets au portfolio</span>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+    <!-- Recent quote requests -->
+    <div class="xl:col-span-2 bg-surface-container-lowest rounded-2xl border border-outline-variant/10 overflow-hidden">
+      <div class="flex items-center justify-between px-6 py-5 border-b border-outline-variant/10">
+        <span class="font-headline font-semibold text-on-surface">Dernières demandes de devis</span>
+        <a href="devis.html" class="text-sm text-secondary hover:underline">Voir tout</a>
+      </div>
+      <div id="recent-devis-list" class="flex flex-col divide-y divide-outline-variant/10">
+        <!-- populated by admin/js/dashboard.js -->
+      </div>
+      <div id="recent-devis-empty" class="hidden flex-col items-center justify-center gap-3 py-14 px-6 text-center">
+        <i class="ph ph-file-text text-3xl text-on-surface-variant"></i>
+        <span class="text-sm text-on-surface-variant">Aucune demande de devis pour le moment.</span>
+      </div>
+    </div>
+
+    <!-- Low stock alerts -->
+    <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/10 overflow-hidden">
+      <div class="flex items-center justify-between px-6 py-5 border-b border-outline-variant/10">
+        <span class="font-headline font-semibold text-on-surface">Alertes stock</span>
+        <a href="produits.html" class="text-sm text-secondary hover:underline">Gérer</a>
+      </div>
+      <div id="low-stock-list" class="flex flex-col divide-y divide-outline-variant/10">
+        <!-- populated by admin/js/dashboard.js -->
+      </div>
+      <div id="low-stock-empty" class="hidden flex-col items-center justify-center gap-3 py-14 px-6 text-center">
+        <i class="ph ph-check-circle text-3xl text-secondary"></i>
+        <span class="text-sm text-on-surface-variant">Aucune alerte de stock.</span>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,38 @@
+<footer class="w-full bg-surface-container-low py-12">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="flex flex-col gap-3">
+      <span class="font-headline font-semibold text-on-surface">EURL Keniar Wide</span>
+      <p class="text-sm text-on-surface-variant">
+        Solutions expertes en sécurité électronique et infrastructures courants faibles pour environnements professionnels haute vigilance.
+      </p>
+    </div>
+    <div class="flex flex-col gap-2">
+      <span class="font-label text-xs text-primary uppercase tracking-wide">Assistance</span>
+      <span class="font-headline text-lg text-secondary">+213 (0) 00 00 00 00</span>
+      <p class="text-sm text-on-surface-variant">Assistance technique et supervision, du lundi au samedi.</p>
+    </div>
+    <div class="flex flex-col gap-2">
+      <span class="font-label text-xs text-primary uppercase tracking-wide">Liens rapides</span>
+      <a href="catalogue-produits.html" class="text-sm text-on-surface-variant hover:text-on-surface">Catalogue Produits</a>
+      <a href="devis-sur-mesure.html" class="text-sm text-on-surface-variant hover:text-on-surface">Devis sur Mesure</a>
+      <a href="realisations.html" class="text-sm text-on-surface-variant hover:text-on-surface">Réalisations</a>
+    </div>
+    <div class="flex flex-col gap-2">
+      <span class="font-label text-xs text-primary uppercase tracking-wide">Légal</span>
+      <a href="#" class="text-sm text-on-surface-variant hover:text-on-surface">Mentions Légales</a>
+      <a href="#" class="text-sm text-on-surface-variant hover:text-on-surface">Politique de Confidentialité</a>
+      <span class="text-sm text-on-surface-variant mt-4">© <span id="footer-year"></span> EURL Keniar Wide. Tous droits réservés.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Shared toast notification -->
+<div id="notification" class="fixed bottom-8 right-8 z-50 bg-surface-container-highest text-on-surface px-6 py-4 rounded-2xl shadow-2xl border border-secondary/20 flex items-center gap-4 translate-y-32 opacity-0 transition-panel">
+  <i id="notif-icon" class="ph-fill ph-check-circle text-secondary text-2xl"></i>
+  <div class="flex flex-col">
+    <span id="notif-title" class="font-headline text-sm font-semibold text-on-surface">Notification</span>
+    <span id="notif-desc" class="text-sm text-on-surface-variant"></span>
+  </div>
+</div>
+
+<script src="js/site.js"></script>

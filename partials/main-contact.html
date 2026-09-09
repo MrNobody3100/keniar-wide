@@ -1,0 +1,62 @@
+<main class="w-full pt-20">
+  <div class="max-w-5xl mx-auto px-6 lg:px-12 py-16 w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <div class="flex flex-col gap-6">
+      <span class="text-xs font-label text-secondary uppercase tracking-wide">Contact</span>
+      <h1 class="font-headline font-bold text-on-surface text-3xl lg:text-4xl">Parlons de votre projet</h1>
+      <p class="text-on-surface-variant">
+        Notre équipe technique vous répond sous 24h ouvrées pour toute demande d'information, de devis ou d'assistance.
+      </p>
+
+      <div class="flex flex-col gap-4 mt-4">
+        <div class="flex items-center gap-4">
+          <div class="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+            <i class="ph ph-phone text-xl"></i>
+          </div>
+          <div>
+            <span class="text-xs font-label text-on-surface-variant uppercase block">Téléphone</span>
+            <span class="font-headline font-semibold text-on-surface">+213 (0) 00 00 00 00</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+            <i class="ph ph-envelope-simple text-xl"></i>
+          </div>
+          <div>
+            <span class="text-xs font-label text-on-surface-variant uppercase block">Email</span>
+            <span class="font-headline font-semibold text-on-surface">contact@keniarwide.dz</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-11 h-11 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+            <i class="ph ph-map-pin text-xl"></i>
+          </div>
+          <div>
+            <span class="text-xs font-label text-on-surface-variant uppercase block">Adresse</span>
+            <span class="font-headline font-semibold text-on-surface">Algérie</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form id="contact-form" class="flex flex-col gap-4 bg-surface-container rounded-2xl p-6 lg:p-8">
+      <div class="flex flex-col gap-2">
+        <label for="contact-nom" class="text-xs font-label text-on-surface-variant uppercase">Nom complet</label>
+        <input id="contact-nom" name="nom" type="text" required
+          class="bg-surface-container-high text-on-surface text-sm px-4 py-3 rounded-xl outline-none focus:ring-2 focus:ring-secondary" />
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="contact-email" class="text-xs font-label text-on-surface-variant uppercase">Email</label>
+        <input id="contact-email" name="email" type="email" required
+          class="bg-surface-container-high text-on-surface text-sm px-4 py-3 rounded-xl outline-none focus:ring-2 focus:ring-secondary" />
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="contact-message" class="text-xs font-label text-on-surface-variant uppercase">Message</label>
+        <textarea id="contact-message" name="message" rows="5" required
+          class="bg-surface-container-high text-on-surface text-sm px-4 py-3 rounded-xl outline-none focus:ring-2 focus:ring-secondary resize-none"></textarea>
+      </div>
+      <button type="submit" class="bg-secondary text-on-secondary px-6 py-3.5 rounded-xl font-headline font-semibold hover:bg-[#164d9e] transition-all flex items-center justify-center gap-2">
+        Envoyer <i class="ph ph-paper-plane-tilt"></i>
+      </button>
+    </form>
+  </div>
+</main>
