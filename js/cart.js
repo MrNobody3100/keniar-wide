@@ -252,7 +252,7 @@ async function renderCartDrawer() {
         class="bg-surface-container-high text-on-surface text-sm px-3 py-2.5 rounded-lg outline-none focus:ring-2 focus:ring-secondary" />
     </div>
 
-    <button id="cart-download-pdf" class="bg-secondary hover:bg-[#164d9e] text-on-secondary py-3 rounded-xl text-sm font-label uppercase tracking-wide flex items-center justify-center gap-2 transition-colors active:scale-95">
+    <button id="cart-download-pdf" class="bg-secondary hover:bg-[#2468b3] text-on-secondary py-3 rounded-xl text-sm font-label uppercase tracking-wide flex items-center justify-center gap-2 transition-colors active:scale-95">
       <i class="ph ph-file-pdf"></i> Générer mon devis PDF
     </button>
     <button id="cart-clear" class="text-xs text-on-surface-variant hover:text-error text-center">Vider le panier</button>`;

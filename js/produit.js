@@ -99,7 +99,7 @@ function renderDetail(product) {
       </div>
 
       <div class="flex flex-col sm:flex-row gap-3">
-        <button class="flex-1 bg-secondary hover:bg-[#164d9e] text-on-secondary py-3.5 rounded-xl text-sm font-label uppercase tracking-wide flex items-center justify-center gap-2 transition-colors active:scale-95"
+        <button class="flex-1 bg-secondary hover:bg-[#2468b3] text-on-secondary py-3.5 rounded-xl text-sm font-label uppercase tracking-wide flex items-center justify-center gap-2 transition-colors active:scale-95"
           onclick="addProductToCart('${product.id}')">
           <i class="ph ph-shopping-cart-simple"></i> Ajouter au panier
         </button>

@@ -105,6 +105,66 @@ header.fixed {
   border-bottom: 2px solid var(--color-brand-orange);
 }
 
+/* Animated primary/secondary CTA buttons — lift + colored glow + a
+   light "shine" sweep on hover. Blue variant for primary actions,
+   orange variant for secondary/outlined actions (brand accent). */
+.btn-glow,
+.btn-glow-orange {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-glow::before,
+.btn-glow-orange::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.btn-glow:hover,
+.btn-glow-orange:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-glow:active,
+.btn-glow-orange:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.btn-glow:hover::before,
+.btn-glow-orange:hover::before {
+  left: 125%;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 14px 32px -10px rgba(47, 125, 217, 0.55);
+}
+
+.btn-glow-orange:hover {
+  box-shadow: 0 14px 32px -10px rgba(249, 160, 38, 0.5);
+}
+
+/* Service/info cards on the homepage — a lighter lift + orange edge,
+   distinct from .product-card's stronger hover treatment. */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-brand-orange);
+  box-shadow: 0 14px 28px -14px rgba(249, 160, 38, 0.4);
+}
+
 /* Product cards — image zoom + lift on hover, brand-orange accent ring
    and glow (matches the card border color). Falls back gracefully on
    touch devices (no hover), with a light tap/active feedback instead. */

@@ -62,7 +62,7 @@ function productCardHTML(product, categoryLabel) {
               <i class="ph ph-plus text-xs"></i>
             </button>
           </div>
-          <button class="flex-1 bg-secondary hover:bg-[#164d9e] text-on-secondary text-xs font-label py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition-colors active:scale-95"
+          <button class="flex-1 bg-secondary hover:bg-[#2468b3] text-on-secondary text-xs font-label py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition-colors active:scale-95"
             onclick="addProductToCart('${product.id}')">
             <i class="ph ph-shopping-cart-simple"></i> Ajouter
           </button>

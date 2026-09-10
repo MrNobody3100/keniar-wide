@@ -129,7 +129,7 @@ function openDevisDetail(id) {
     </div>
 
     <a href="/api/devis-pdf?id=${d.id}" target="_blank"
-      class="flex items-center justify-center gap-2 bg-secondary text-on-secondary px-4 py-2.5 rounded-xl text-sm font-headline font-semibold hover:bg-[#164d9e] transition-all">
+      class="flex items-center justify-center gap-2 bg-secondary text-on-secondary px-4 py-2.5 rounded-xl text-sm font-headline font-semibold hover:bg-[#2468b3] transition-all">
       <i class="ph ph-file-pdf text-lg"></i> Télécharger le devis en PDF
     </a>
 
