@@ -227,3 +227,73 @@ header.fixed {
   width: 20px;
   border-radius: 9999px;
 }
+
+
+/* ============================================================
+   ENHANCED MOTION LAYER
+   ============================================================ */
+
+#hero-network,
+#page-network {
+  will-change: transform;
+}
+
+#hero-network {
+  opacity: 0.96;
+}
+
+#page-network {
+  opacity: 0.72;
+}
+
+/* Give the hero content a subtle cinematic depth */
+#hero > .relative.z-10 {
+  perspective: 1200px;
+}
+
+.hero-title,
+.hero-desc,
+.hero-ctas,
+.hero-stats {
+  transform: translateZ(0);
+}
+
+/* Better interactive card motion */
+.service-card,
+.product-card,
+.realisation-card {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.service-card:hover {
+  transform: translateY(-7px) scale(1.012);
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.008);
+}
+
+/* Smooth focus states */
+.btn-glow:focus-visible,
+.btn-glow-orange:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-brand-orange);
+  outline-offset: 4px;
+}
+
+/* Respect reduced-motion at CSS level too */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
