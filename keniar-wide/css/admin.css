@@ -1,0 +1,96 @@
+@import url("tokens.css");
+
+.admin-checking-auth body {
+  visibility: hidden;
+}
+
+body.admin-body {
+  background-color: var(--color-surface-container-low);
+}
+
+/* Sidebar active link */
+.admin-nav-link[data-active="true"] {
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary) !important;
+}
+
+.admin-nav-link[data-active="true"] i {
+  color: var(--color-on-secondary) !important;
+}
+
+/* Status badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-family: var(--font-label);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.badge-new {
+  background-color: rgba(26, 90, 192, 0.12);
+  color: var(--color-secondary);
+}
+
+.badge-progress {
+  background-color: rgba(126, 87, 0, 0.12);
+  color: var(--color-tertiary);
+}
+
+.badge-done {
+  background-color: rgba(16, 133, 82, 0.12);
+  color: #108552;
+}
+
+.badge-danger {
+  background-color: var(--color-error-container);
+  color: var(--color-on-error-container);
+}
+
+.badge-muted {
+  background-color: var(--color-surface-container-highest);
+  color: var(--color-on-surface-variant);
+}
+
+/* Simple modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 27, 27, 0.55);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+}
+
+/* Table rows */
+.admin-table tbody tr:hover {
+  background-color: var(--color-surface-container-high);
+}
+
+/* Image upload preview */
+.upload-dropzone {
+  border: 1.5px dashed var(--color-outline-variant);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  color: var(--color-on-surface-variant);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.upload-dropzone:hover {
+  border-color: var(--color-secondary);
+  background-color: var(--color-surface-container-high);
+}

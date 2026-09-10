@@ -1,0 +1,14 @@
+{
+  "name": "keniar-wide",
+  "private": true,
+  "version": "1.0.0",
+  "description": "EURL Keniar Wide — static site + admin, with a few Vercel serverless functions for admin auth and PDF quotes.",
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
+    "acorn": "^8.18.0",
+    "pdfkit": "^0.15.2"
+  }
+}

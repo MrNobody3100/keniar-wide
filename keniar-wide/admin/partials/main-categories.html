@@ -1,0 +1,79 @@
+<div class="flex flex-col gap-6">
+
+  <div class="flex items-center justify-between">
+    <p class="text-sm text-on-surface-variant max-w-lg">
+      Les catégories organisent le catalogue produits, les réalisations et les options du configurateur de devis sur le site public.
+    </p>
+    <button id="open-add-category" class="bg-secondary text-on-secondary px-5 py-2.5 rounded-xl text-sm font-headline font-semibold hover:bg-[#2468b3] transition-all flex items-center gap-2 shrink-0">
+      <i class="ph ph-plus"></i> Ajouter une catégorie
+    </button>
+  </div>
+
+  <div id="categories-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+    <!-- rendered by admin/js/categories.js -->
+  </div>
+
+  <div id="categories-empty" class="hidden flex-col items-center justify-center gap-4 py-20 px-6 text-center bg-surface-container-lowest rounded-2xl border border-outline-variant/10">
+    <div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+      <i class="ph ph-squares-four text-3xl"></i>
+    </div>
+    <span class="font-headline font-semibold text-on-surface">Aucune catégorie</span>
+    <button onclick="openCategoryModal()" class="bg-secondary text-on-secondary px-6 py-3 rounded-xl text-sm font-headline font-semibold hover:bg-[#2468b3] transition-all flex items-center gap-2">
+      <i class="ph ph-plus"></i> Ajouter une catégorie
+    </button>
+  </div>
+</div>
+
+<!-- Add / Edit category modal -->
+<div id="category-modal" class="hidden modal-overlay">
+  <div class="bg-surface-container-lowest rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
+    <div class="flex items-center justify-between px-6 py-5 border-b border-outline-variant/10">
+      <span id="category-modal-title" class="font-headline font-semibold text-on-surface text-lg">Ajouter une catégorie</span>
+      <button onclick="closeCategoryModal()" class="text-on-surface-variant hover:text-on-surface p-1"><i class="ph ph-x text-xl"></i></button>
+    </div>
+
+    <form id="category-form" class="flex flex-col gap-5 p-6">
+      <input type="hidden" id="category-id" />
+
+      <div class="flex flex-col gap-2">
+        <label for="category-label" class="text-xs font-label text-on-surface-variant uppercase">Nom de la catégorie</label>
+        <input id="category-label" required type="text" placeholder="Ex : Vidéophones IP"
+          class="bg-surface-container-high text-on-surface text-sm px-4 py-3 rounded-xl outline-none focus:ring-2 focus:ring-secondary" />
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <label class="text-xs font-label text-on-surface-variant uppercase">Icône</label>
+        <div id="icon-picker" class="grid grid-cols-6 sm:grid-cols-8 gap-2">
+          <!-- populated by admin/js/categories.js -->
+        </div>
+        <input type="hidden" id="category-icon" value="shapes" />
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-2 border-t border-outline-variant/10">
+        <button type="button" onclick="closeCategoryModal()" class="px-5 py-2.5 rounded-xl text-sm font-headline font-semibold text-on-surface-variant hover:bg-surface-container-high transition-colors">
+          Annuler
+        </button>
+        <button type="submit" class="bg-secondary text-on-secondary px-6 py-2.5 rounded-xl text-sm font-headline font-semibold hover:bg-[#2468b3] transition-all flex items-center gap-2">
+          <i class="ph ph-check"></i> Enregistrer
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Delete blocked / confirm modal -->
+<div id="category-delete-modal" class="hidden modal-overlay">
+  <div class="bg-surface-container-lowest rounded-2xl w-full max-w-sm p-6 flex flex-col gap-4">
+    <div id="category-delete-icon" class="w-12 h-12 rounded-full bg-error-container flex items-center justify-center text-on-error-container">
+      <i class="ph ph-trash text-2xl"></i>
+    </div>
+    <div>
+      <span id="category-delete-title" class="font-headline font-semibold text-on-surface block">Supprimer cette catégorie ?</span>
+      <span id="category-delete-desc" class="text-sm text-on-surface-variant">Cette action est irréversible.</span>
+    </div>
+    <div id="category-delete-actions" class="flex items-center justify-end gap-3">
+      <button onclick="closeCategoryDeleteModal()" class="px-4 py-2.5 rounded-xl text-sm font-headline font-semibold text-on-surface-variant hover:bg-surface-container-high">Annuler</button>
+      <button id="category-delete-confirm" onclick="confirmDeleteCategory()" class="bg-error text-on-error px-5 py-2.5 rounded-xl text-sm font-headline font-semibold hover:opacity-90">Supprimer</button>
+    </div>
+  </div>
+</div>
